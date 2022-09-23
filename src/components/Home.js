@@ -1,12 +1,22 @@
 import Posts from './posts/Posts';
+import { useState } from 'react';
 
 const Home = () => {
-  const title = "Home"
-  const style = {color: "red", }
+  
+  let [name, setName] = useState("Ali")
+  const handleClick = ( ) => {
+    
+    setName("Hossam");
+  };
+  console.log(name)
 
   return (
     <div className="home">
-      <h2 style={style}>{title}</h2>
+      
+        <button className='btn' onClick={handleClick}>
+        Click Me!
+        </button>
+        <h1>{name}</h1>
         <Posts />
         
     </div>
