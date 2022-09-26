@@ -4,11 +4,12 @@ import { useState } from 'react';
 const Home = () => {
   
   let [name, setName] = useState("Ali")
-  const handleClick = ( ) => {
+  const handleClick = () => {
     
-    setName("Hossam");
-  };
-  console.log(name)
+     setName("Hossam");
+   };
+
+   console.log(name)
 
   return (
     <div className="home">
