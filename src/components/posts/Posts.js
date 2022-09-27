@@ -5,15 +5,19 @@ import { useState,useEffect } from "react"
 const Posts = () => {
 
   const [posts, setPost] = useState(null);
+  const [isloading, setIsloading] = useState(false);
 
   useEffect(() =>{
+    setIsloading(true);
     fetch("http://localhost:4000/posts").then(res => {
     return res.json()
     .then(data => {
-      console.log(data);
+      // console.log(data);
+      setPost(data);
+      setIsloading(false);
     })
-    })
-  },[])
+    });
+  },[]);
 
 
   const handleDelete = (id) => {
@@ -26,9 +30,12 @@ const Posts = () => {
   return (
     <section className="posts">
       
-      {posts ? posts.map((post) => (
+      {posts && posts.map((post) => (
         <Post key={post.id} post={post} handleDelete={handleDelete}/>
-      ) ):"no posts"}
+      ) )}
+      {isloading && <div>  Loading ...</div>}
+      
+      
      
 
       </section>
