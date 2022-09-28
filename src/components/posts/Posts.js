@@ -11,9 +11,11 @@ const Posts = () => {
     setIsloading(true);
     fetch("http://localhost:4000/postss")
     .then((res)=>{
-      if(res.ok){
-        return res.json();
+      if(!res.ok){
+        throw Error("Not Found")
+       
       }
+      return res.json();
     })
     .then((data) => {
       console.log(data);
