@@ -6,6 +6,7 @@ const Posts = () => {
 
   const [posts, setPost] = useState(null);
   const [isloading, setIsloading] = useState(false);
+  const [errMsg, setErrMsg] = useState(false);
 
   useEffect(() =>{
     setIsloading(true);
