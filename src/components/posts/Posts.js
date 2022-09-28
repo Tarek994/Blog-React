@@ -10,7 +10,7 @@ const Posts = () => {
 
   useEffect(() =>{
     setIsloading(true);
-    fetch("http://localhost:4000/postss")
+    fetch("http://localhost:4000/posts")
     .then((res)=>{
       if(!res.ok){
         throw Error("Not Found")
@@ -29,10 +29,6 @@ const Posts = () => {
 },[])
     
     
-    
- 
-
-
   const handleDelete = (id) => {
   let curposts = [...posts]
   let newposts = curposts.filter(post => post.id !== id)
