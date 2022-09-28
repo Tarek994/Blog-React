@@ -20,8 +20,9 @@ const Posts = () => {
     .then((data) => {
       console.log(data);
       setPost(data);
-      setIsloading(false);
+      
     }).catch(err => {
+      setIsloading(false);
       console.log(err.message)
     })
 },[])
