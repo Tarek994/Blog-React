@@ -34,8 +34,8 @@ const Posts = () => {
         <Post key={post.id} post={post} handleDelete={handleDelete}/>
       ) )}
       {isloading && <div>  Loading ...</div>}
-      
-      
+      {!posts && !isloading && <div className="not-found"> No Posts.. </div>}
+    
      
 
       </section>
