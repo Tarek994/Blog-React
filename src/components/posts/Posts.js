@@ -9,10 +9,11 @@ const Posts = () => {
 
   useEffect(() =>{
     setIsloading(true);
-    fetch("http://localhost:4000/posts").then(res => {
+    fetch("http://localhost:4000/postss").then(res => {
+    console.log(res);
     return res.json()
     .then(data => {
-      // console.log(data);
+       
       setPost(data);
       setIsloading(false);
     })
