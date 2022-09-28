@@ -48,7 +48,7 @@ const Posts = () => {
       ) )}
       {isloading && <div>  Loading ...</div>}
       {!posts && !isloading && !errMsg && <div className="not-found"> No Posts.. </div>}
-      {errMsg && <div >{errMsg}</div>}
+      {errMsg && <div className="error">{errMsg}</div>}
      
 
       </section>
