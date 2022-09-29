@@ -27,8 +27,8 @@ const useFetch = (url) =>{
         setIsloading(false);
         setErrMsg(err.message)
       })
-  },[])
-    
+  },[url])
+    return {data,isloading,errMsg}
 }
 
 export default useFetch
