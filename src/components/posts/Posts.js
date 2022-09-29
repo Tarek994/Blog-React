@@ -10,6 +10,7 @@ const Posts = () => {
 
   useEffect(() =>{
     setIsloading(true);
+    setErrMsg(null);
     fetch("http://localhost:4000/posts")
     .then((res)=>{
       console.log(res)
