@@ -14,9 +14,11 @@ function App() {
 
       <Header/>
       <main className="container">
+        <Switch>
          <Home/>
          {/* <PostDetails /> */}
          {/* <CreatePost /> */}
+         </Switch>
       </main>
      
       
