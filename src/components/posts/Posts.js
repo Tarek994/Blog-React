@@ -1,8 +1,10 @@
 import Post from "./Post"
 import { useState,useEffect } from "react"
+import useFetch from "../../useFetch";
 
 
 const Posts = () => {
+  let {data:posts, isloading, errMsg} = useFetch("http://localhost:4000/posts");
 
   const [posts, setPost] = useState(null);
   const [isloading, setIsloading] = useState(false);
