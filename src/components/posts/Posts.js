@@ -10,7 +10,7 @@ const Posts = () => {
 
   useEffect(() =>{
     setIsloading(true);
-    fetch("http://localhost:4000/postss")
+    fetch("http://localhost:4000/posts")
     .then((res)=>{
       console.log(res)
       if(!res.ok){
