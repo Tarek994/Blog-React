@@ -12,6 +12,7 @@ const Posts = () => {
     setIsloading(true);
     fetch("http://localhost:4000/posts")
     .then((res)=>{
+      console.log(res)
       if(!res.ok){
         throw Error("Not Found")
        
@@ -19,10 +20,11 @@ const Posts = () => {
       return res.json();
     })
     .then((data) => {
+      setIsloading(false)
       console.log(data);
       setPost(data);
       
-    }).catch(err => {
+    }).catch((err) => {
       setIsloading(false);
       setErrMsg(err.message)
     })
