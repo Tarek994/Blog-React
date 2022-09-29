@@ -10,11 +10,11 @@ const Posts = () => {
 
   useEffect(() =>{
     setIsloading(true);
-    fetch("http://localhost:4000/posts")
+    fetch("http://localhost:4000/postss")
     .then((res)=>{
       console.log(res)
       if(!res.ok){
-        throw Error("Not Found")
+        throw Error(res.statusText ? res.statusText : "Error")
        
       }
       return res.json();
