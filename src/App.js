@@ -9,6 +9,7 @@ import CreatePost from './components/posts/CreatePost';
 
 function App() {
   return (
+    <Router>
     <div className='App'>
 
       <Header/>
@@ -23,6 +24,7 @@ function App() {
 
       <Footer />
     </div>
+    </Router>
   );
 }
 
