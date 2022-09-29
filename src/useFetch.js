@@ -9,7 +9,7 @@ const useFetch = (url) =>{
     useEffect(() =>{
       setIsloading(true);
       setErrMsg(null);
-      fetch("http://localhost:4000/posts")
+      fetch(url)
       .then((res)=>{
         console.log(res)
         if(!res.ok){
