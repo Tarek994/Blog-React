@@ -16,13 +16,11 @@ function App() {
       <Header/>
       <main className="container">
         <Routes>
+          
           <Route  path="/" exact element={<Home/>}/>
           <Route  path="/post" element={<PostDetails/>}/>
           <Route  path="/create" element={<CreatePost/>}/>
 
-         {/* <Home/> */}
-         {/* <PostDetails /> */}
-         {/* <CreatePost /> */}
          </Routes>
       </main>
      
