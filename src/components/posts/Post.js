@@ -5,7 +5,7 @@ const Post = ({post , handleDelete}) => {
 
   return (
 
-    <Link to="/post" className="post">
+    <Link to={`/post/${post.id}`} className="post">
       <img
         src={post.image}
         alt=""
