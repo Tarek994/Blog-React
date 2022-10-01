@@ -18,7 +18,7 @@ function App() {
         <Routes>
           
           <Route  path="/" exact element={<Home/>}/>
-          <Route  path="/post" element={<PostDetails/>}/>
+          <Route  path="/post/:id" element={<PostDetails/>}/>
           <Route  path="/create" element={<CreatePost/>}/>
 
          </Routes>
