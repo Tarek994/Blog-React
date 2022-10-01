@@ -9,7 +9,6 @@ const Header = () => {
                 <Link to="/">Home </Link>
                 <Link to="/create" className="btn"> New Post </Link>
             </div>
-
         </nav>
     </header>
   )

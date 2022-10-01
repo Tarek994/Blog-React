@@ -1,5 +1,8 @@
+import { useParams } from "react-router-dom";
 
-const PostDetails = () => {
+
+const PostDetails = (props) => {
+  
   return (
     <article className="container post-details">
         <div className="post-details-title">
