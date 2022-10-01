@@ -9,7 +9,7 @@ const Home = () => {
      setName("Hossam");
    };
 
-   console.log(name)
+   
 
   return (
     <div className="home">
