@@ -11,7 +11,7 @@ const useFetch = (url) =>{
       setErrMsg(null);
       fetch(url)
       .then((res)=>{
-        console.log(res)
+        
         if(!res.ok){
           throw Error(res.statusText ? res.statusText : "Error")
          
@@ -20,7 +20,7 @@ const useFetch = (url) =>{
       })
       .then((data) => {
         setIsloading(false)
-        console.log(data);
+        
         setData(data);
         
       }).catch((err) => {

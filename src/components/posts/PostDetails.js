@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 
 
 const PostDetails = (props) => {
+  console.log(props)
   
   return (
     <article className="container post-details">
