@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom"
 const Post = ({post , handleDelete, id}) => {
   const navigate = useNavigate();
   return (
-
     <div className="post" onClick={()=>{
       navigate(`/post/` + id)}}>
       <img
