@@ -1,12 +1,14 @@
 import useFetch from "../../useFetch";
-import { useParams } from "react-router-dom";
-const PostDetails = () => {
-  
-  const props = useParams();
-  
-  console.log(props.id)
+import { useParams } from "react-router-dom"
 
-  let {data:post, isloading, errMsg} = useFetch(`http://localhost:4000/posts${props.id}`);
+
+
+const PostDetails = () => {
+
+    const {id}  = useParams();
+    
+    
+  let {data:post, isloading, errMsg} = useFetch(`http://localhost:4000/posts${id}`);
   return (
          
        < >

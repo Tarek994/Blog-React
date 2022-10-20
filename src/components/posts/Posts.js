@@ -15,8 +15,8 @@ const Posts = () => {
   return (
     <section className="posts">
       
-      {posts && posts.map((post) => (
-        <Post key={post.id} post={post} handleDelete={handleDelete}/>
+      {posts && posts.map((post,idx) => (
+        <Post key={post.id} post={post}  id={idx} handleDelete={handleDelete}/>
       ))}
       {isloading && <div>  Loading ...</div>}
       {!posts && !isloading && !errMsg && <div className="not-found"> No Posts.. </div>}
