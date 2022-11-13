@@ -3,6 +3,9 @@ import { useState } from "react"
 
 const CreatePost = () => {
   const [title, setTitle] = useState("");
+  const [ body, setBody] = useState("");
+  const [ url, setUrl] = useState("");
+
 
 
   return (
@@ -17,9 +20,11 @@ const CreatePost = () => {
           value={title}
           onChange={(e) => setTitle(e.target.value) } />
         <label>Blog Image :</label>
-        <input type="url" required />
+        <input type="url" required value={url}
+          onChange={(e) => setUrl(e.target.value) } />
         <label>Blog body :</label>
-        <textarea required rows="10"></textarea>
+        <textarea required rows="10" value={body}
+          onChange={(e) => setBody(e.target.value) } ></textarea>
         <label>Blog author :</label>
         <select>
           <option value="admin">admin</option>
