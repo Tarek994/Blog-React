@@ -202,7 +202,7 @@ footer * {
   margin-bottom: 1rem;
   border: none;
   outline: none;
-  padding: 0.5rem 0.75rem;
+  padding: 0.8rem 5.75rem;
   border-radius: 3px;
   background-color: var(--color-bg);
 }
