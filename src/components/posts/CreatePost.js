@@ -1,12 +1,21 @@
+import { useState } from "react"
+
 
 const CreatePost = () => {
+  const [title, setTitle] = useState("");
+
+
   return (
 <section className="create-post">
     <h2> Add New Post</h2>
     <form>
     <form>
         <label>Blog title :</label>
-        <input type="text" required />
+        <input
+         type="text"
+          required
+          value={title}
+          onChange={(e) => setTitle(e.target.value) } />
         <label>Blog Image :</label>
         <input type="url" required />
         <label>Blog body :</label>
