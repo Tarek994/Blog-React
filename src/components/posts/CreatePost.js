@@ -5,15 +5,22 @@ const CreatePost = () => {
   const [title, setTitle] = useState("");
   const [ body, setBody ] = useState("");
   const [ url,  setUrl  ] = useState("");
-  const [ author,  setAuthor  ] = useState("");
+  const [ author,  setAuthor  ] = useState("codv");
 
 
+  const handleForm = (e) =>{
+    e.preventDefault();
+      console.log(title)
+      console.log(url)
+      console.log(body)
+      console.log(author)
 
+  }
   return (
     <section className="create-post">
       
         <h2> Add New Post</h2>
-        <form>
+        <form onSubmit={handleForm}>
             <label>Blog title :</label>
             <input
             type="text"
