@@ -5,13 +5,14 @@ const CreatePost = () => {
   const [title, setTitle] = useState("");
   const [ body, setBody ] = useState("");
   const [ url,  setUrl  ] = useState("");
+  const [ author,  setAuthor  ] = useState("");
 
 
 
   return (
     <section className="create-post">
+      
         <h2> Add New Post</h2>
-        <form>
         <form>
             <label>Blog title :</label>
             <input
@@ -26,7 +27,8 @@ const CreatePost = () => {
             <textarea required rows="10" value={body}
               onChange={(e) => setBody(e.target.value) } ></textarea>
             <label>Blog author :</label>
-            <select>
+            <select value={author}
+              onChange={(e) => setAuthor(e.target.value) }>
               <option value="admin">admin</option>
               <option value="codv">codv</option>
             </select>
@@ -34,8 +36,6 @@ const CreatePost = () => {
               Add Blog
             </button>
           </form>
-
-        </form>
 
     </section>  )
 }
