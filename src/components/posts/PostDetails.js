@@ -3,13 +3,22 @@ import { useParams } from "react-router-dom"
 
 
 
-const PostDetails = () => {
+const PostDetails = (props) => {
 
     const {id}  = useParams();
     
   let {data:post, isloading, errMsg} = useFetch(`http://localhost:4000/posts?id=${id}`);
   if(post) post = post[0];
   
+  const handleDelete = () => {
+    if(post) post = post[0];
+      fetch(`http://localhost:4000/posts?id=${id}`,{
+        method: "DELETE"
+      }).then(() =>{
+        props.history.push('/')
+      })
+  }
+
   return (
          
        < >
@@ -20,7 +29,7 @@ const PostDetails = () => {
           <article className="container post-details">
         <div className="post-details-title">
         <h1>{post.title}</h1>
-        <button className="btn btn-danger"> Delete </button>
+        <button className="btn btn-danger" onClick={handleDelete}> Delete </button>
       </div>
       <img
         src={post.image}
