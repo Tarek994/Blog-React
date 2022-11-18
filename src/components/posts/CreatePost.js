@@ -10,12 +10,19 @@ const CreatePost = () => {
 
   const handleForm = (e) =>{
     e.preventDefault();
-      console.log(title)
-      console.log(url)
-      console.log(body)
-      console.log(author)
+      const post = {
+        title,
+        body,
+        image: url,
+        author,
+      };
+      fetch("http://localhost:4000/posts",{
+        method: "POST",
+        headers:{"Content-Type": "application/json"},
+        body: JSON.stringify(post),
+      })
+  };
 
-  }
   return (
     <section className="create-post">
       
