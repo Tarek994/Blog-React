@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-const CreatePost = () => {
+const CreatePost = (props) => {
   const [title, setTitle] = useState("");
   const [ body, setBody ] = useState("");
   const [ url,  setUrl  ] = useState("");
@@ -20,6 +20,9 @@ const CreatePost = () => {
         method: "POST",
         headers:{"Content-Type": "application/json"},
         body: JSON.stringify(post),
+      }).then(() =>{
+        console.log("post added")
+        props.history.push("/");
       })
   };
 
@@ -50,8 +53,8 @@ const CreatePost = () => {
               Add Blog
             </button>
           </form>
-
     </section>  )
 }
 
 export default CreatePost
+
