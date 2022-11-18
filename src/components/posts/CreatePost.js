@@ -21,7 +21,6 @@ const CreatePost = (props) => {
         headers:{"Content-Type": "application/json"},
         body: JSON.stringify(post),
       }).then(() =>{
-        console.log("post added")
         props.history.push("/");
       })
   };
