@@ -13,6 +13,7 @@ const PostDetails = (props) => {
   const handleDelete = () => {
     if(post) post = post[0];
       fetch(`http://localhost:4000/posts?id=${id}`,{
+        
         method: "DELETE"
       }).then(() =>{
         props.history.push('/')
