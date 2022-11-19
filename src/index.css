@@ -149,7 +149,6 @@ footer * {
 
 .post-details {
 }
-
 .post-details-title {
   display: flex;
   justify-content: space-between;
@@ -174,7 +173,6 @@ footer * {
   line-height: 1.7;
 }
 .create-post {
-  
 }
 .create-post h2 {
   font-size: 1.5rem;
@@ -202,7 +200,7 @@ footer * {
   margin-bottom: 1rem;
   border: none;
   outline: none;
-  padding: 0.8rem 5.75rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 3px;
   background-color: var(--color-bg);
 }
@@ -220,6 +218,7 @@ footer * {
 .not-found p {
   margin: 1rem 0;
 }
+
 .error {
   background-color: #ff7d5c3f;
   color: var(--color-primary-dark);

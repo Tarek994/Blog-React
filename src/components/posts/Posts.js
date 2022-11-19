@@ -6,17 +6,13 @@ import useFetch from "../../useFetch";
 const Posts = () => {
   let {data:posts, isloading, errMsg} = useFetch("http://localhost:4000/posts");
 
-  const handleDelete = (id) => {
-  let curposts = [...posts]
-  let newposts = curposts.filter(post => post.id !== id)
-      // setPost(newposts);
-   };
+
 
   return (
     <section className="posts">
       
       {posts && posts.map((post,idx) => (
-        <Post key={post.id} post={post}  id={idx} handleDelete={handleDelete}/>
+        <Post key={post.id} post={post}  id={idx} />
       ))}
       {isloading && <div>  Loading ...</div>}
       {!posts && !isloading && !errMsg && <div className="not-found"> No Posts.. </div>}
