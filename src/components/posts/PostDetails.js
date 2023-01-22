@@ -1,24 +1,30 @@
 import useFetch from "../../useFetch";
 import { useParams } from "react-router-dom"
-
+import { useNavigate } from "react-router-dom";
 
 
 const PostDetails = (props) => {
-
+    const navigate = useNavigate();
     const {id}  = useParams();
     
-  let {data:post, isloading, errMsg} = useFetch(`http://localhost:4000/posts?id=${id}`);
+  let {data:post, isloading, errMsg} = useFetch(`http://localhost:4000/data/db/posts?id=${id}`);
   if(post) post = post[0];
   
-  const handleDelete = () => {
-    if(post) post = post[0];
-      fetch(`http://localhost:4000/posts?id=${id}`,{
-        
+  const handleDelete = async (id ) => {
+    try{
+      const response = await
+      fetch(`http://localhost:4000/data/db/posts/${id}`,{
         method: "DELETE"
-      }).then(() =>{
-        props.history.push('/')
-      })
+      });
+      if(!response.ok){
+        throw new Error("Failed to delete post");
+      }
+      
+    } catch(error){
+      console.error(error);
+    }navigate('/');
   }
+ 
 
   return (
          
