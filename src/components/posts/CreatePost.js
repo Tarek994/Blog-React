@@ -1,14 +1,17 @@
 import { useState } from "react"
-
+import {useNavigate} from 'react-router-dom'; 
 
 const CreatePost = (props) => {
   const [title, setTitle] = useState("");
   const [ body, setBody ] = useState("");
   const [ url,  setUrl  ] = useState("");
   const [ author,  setAuthor  ] = useState("codv");
+  const navigate = useNavigate()
 
 
-  const handleForm = (e) =>{
+
+  const handleForm = async (e) =>{
+    
     e.preventDefault();
       const post = {
         title,
@@ -21,7 +24,7 @@ const CreatePost = (props) => {
         headers:{"Content-Type": "application/json"},
         body: JSON.stringify(post),
       }).then(() =>{
-        props.history.push("/");
+        navigate('/');
       })
   };
 
