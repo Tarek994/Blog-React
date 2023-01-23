@@ -36,7 +36,7 @@ const PostDetails = (props) => {
           <article className="container post-details">
         <div className="post-details-title">
         <h1>{post.title}</h1>
-        <button className="btn btn-danger" onClick={handleDelete}> Delete </button>
+        <button className="btn btn-danger" onClick={() => handleDelete(post.id)}> Delete </button>
       </div>
       <img
         src={post.image}
