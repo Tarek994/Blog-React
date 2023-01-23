@@ -43,10 +43,10 @@ const PostDetails = (props) => {
         alt=""
         className="post-details-img"
       />
-      <p className="post-details-body">
+      <div className="post-details-body">
         {post.body}
         <p>{post.author}</p>
-      </p>
+      </div>
 
     </article>
          )}
